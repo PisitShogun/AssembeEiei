@@ -51,7 +51,7 @@ where
             result.push(model.to_model(crew_count));
         }
 
-        Ok(result)
+        Ok(result)      
     }
     
     pub async fn get_mission_count(&self, mission_id: i32) -> Result<Vec<BrawlerModel>> {

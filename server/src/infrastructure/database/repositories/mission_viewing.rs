@@ -78,7 +78,7 @@ impl MissionViewingRepository for MissionViewingPostgres {
         let sql = r#"
             SELECT 
                b.display_name,
-               COALESCE(b.avatar_url, '') AS avatar_url,
+               COALESCE(b.avatar_url, '') AS avatar   _url,
                COALESCE(s.success_count, 0) AS mission_success_count,
                COALESCE(j.joined_count, 0) AS mission_joined_count
             FROM 

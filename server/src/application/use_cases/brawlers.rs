@@ -43,7 +43,7 @@ where
         Ok(passport)
     }
     pub async fn upload_avatar(
-        &self,
+        &self,  
         base64_image: String,
         brawler_id: i32,
     ) -> Result<UploadedImage> {
