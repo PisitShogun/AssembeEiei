@@ -1,0 +1,16 @@
+<mat-toolbar class="my-navbar">
+  <button class="home-btn" routerLink="/">
+    My-app</button>
+  <span class="spacer"></span>
+  @if (display_name()) {
+ <button matButton [matMenuTriggerFor]="menu" routerLinkActive="active">
+   <img src="{{ avatar_url() }}" alt="" class="avatar">
+   {{ display_name() }}
+</button>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item class="menu-button" routerLink="/profile">Profile</button>
+  <!-- <button mat-menu-item class="menu-button" (click)="()">Log-out</button> -->
+</mat-menu>
+}
+</mat-toolbar>

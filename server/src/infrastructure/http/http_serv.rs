@@ -54,6 +54,7 @@ fn api_serve(db_pool: Arc<PgPoolSquad>) -> Router {
             routers::mission_viewing::routes(Arc::clone(&db_pool)),
         )
         .fallback(|| async { (StatusCode::NOT_FOUND, "API not found") })
+        // .nest("/make-error", routers::default::make_error)
 }
 
 pub async fn start(config: Arc<DotEnvyConfig>, db_pool: Arc<PgPoolSquad>) -> Result<()> {
